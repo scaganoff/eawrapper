@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="CP850"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=CP850" http-equiv="Content-Type" />
+
+  <title>Module: EA::Sequence</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/eawrapper/connector_types/sequence_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/eawrapper/connector_types/sequence.rb">lib/eawrapper/connector_types/sequence.rb</a></li>
+          
+            <li><a href="../lib/eawrapper/diagram_types/sequence_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/eawrapper/diagram_types/sequence.rb">lib/eawrapper/diagram_types/sequence.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-consumer">#consumer</a></li>
+          
+          <li><a href="#method-i-kind">#kind</a></li>
+          
+          <li><a href="#method-i-mep">#mep</a></li>
+          
+          <li><a href="#method-i-provider">#provider</a></li>
+          
+          <li><a href="#method-i-source_endpoint">#source_endpoint</a></li>
+          
+          <li><a href="#method-i-target_endpoint">#target_endpoint</a></li>
+          
+          <li><a href="#method-i-to_s">#to_s</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../Gemfile.html">Gemfile</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="../nbproject/private/rake-d_txt.html">rake-d.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../EA.html">EA</a></li>
+        
+          <li><a href="../EA/Action.html">EA::Action</a></li>
+        
+          <li><a href="../EA/Activity.html">EA::Activity</a></li>
+        
+          <li><a href="../EA/ActivityPartition.html">EA::ActivityPartition</a></li>
+        
+          <li><a href="../EA/Actor.html">EA::Actor</a></li>
+        
+          <li><a href="../EA/Collection.html">EA::Collection</a></li>
+        
+          <li><a href="../EA/Component.html">EA::Component</a></li>
+        
+          <li><a href="../EA/Connector.html">EA::Connector</a></li>
+        
+          <li><a href="../EA/Container.html">EA::Container</a></li>
+        
+          <li><a href="../EA/ContainerTest.html">EA::ContainerTest</a></li>
+        
+          <li><a href="../EA/Dependency.html">EA::Dependency</a></li>
+        
+          <li><a href="../EA/Diagram.html">EA::Diagram</a></li>
+        
+          <li><a href="../EA/Element.html">EA::Element</a></li>
+        
+          <li><a href="../EA/Interaction.html">EA::Interaction</a></li>
+        
+          <li><a href="../EA/Interface.html">EA::Interface</a></li>
+        
+          <li><a href="../EA/Issue.html">EA::Issue</a></li>
+        
+          <li><a href="../EA/Klass.html">EA::Klass</a></li>
+        
+          <li><a href="../EA/Matrix.html">EA::Matrix</a></li>
+        
+          <li><a href="../EA/Method.html">EA::Method</a></li>
+        
+          <li><a href="../EA/Model.html">EA::Model</a></li>
+        
+          <li><a href="../EA/Note.html">EA::Note</a></li>
+        
+          <li><a href="../EA/OLEDelegate.html">EA::OLEDelegate</a></li>
+        
+          <li><a href="../EA/Package.html">EA::Package</a></li>
+        
+          <li><a href="../EA/Parameter.html">EA::Parameter</a></li>
+        
+          <li><a href="../EA/Port.html">EA::Port</a></li>
+        
+          <li><a href="../EA/ProvidedInterface.html">EA::ProvidedInterface</a></li>
+        
+          <li><a href="../EA/Realisation.html">EA::Realisation</a></li>
+        
+          <li><a href="../EA/Repository.html">EA::Repository</a></li>
+        
+          <li><a href="../EA/RequiredInterface.html">EA::RequiredInterface</a></li>
+        
+          <li><a href="../EA/Requirement.html">EA::Requirement</a></li>
+        
+          <li><a href="../EA/Sequence.html">EA::Sequence</a></li>
+        
+          <li><a href="../EA/Services.html">EA::Services</a></li>
+        
+          <li><a href="../EA/Services/Endpoint.html">EA::Services::Endpoint</a></li>
+        
+          <li><a href="../EA/StateNode.html">EA::StateNode</a></li>
+        
+          <li><a href="../EA/UseCase.html">EA::UseCase</a></li>
+        
+          <li><a href="../ActivityDiagramTest.html">ActivityDiagramTest</a></li>
+        
+          <li><a href="../InterfacesTest.html">InterfacesTest</a></li>
+        
+          <li><a href="../OleDelegateTest.html">OleDelegateTest</a></li>
+        
+          <li><a href="../RepoTest.html">RepoTest</a></li>
+        
+          <li><a href="../SequenceDiagramTest.html">SequenceDiagramTest</a></li>
+        
+          <li><a href="../TaggedValue.html">TaggedValue</a></li>
+        
+          <li><a href="../TraceabilityTest.html">TraceabilityTest</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">EA::Sequence</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="consumer-method" class="method-detail ">
+          <a name="method-i-consumer"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">consumer</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="consumer-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/connector_types/sequence.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">consumer</span>
+  <span class="ruby-identifier">result</span>=<span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Unknown MEP for sequence '#{name}'&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">mep</span><span class="ruby-operator">==</span><span class="ruby-string">'unknown'</span>
+  <span class="ruby-identifier">result</span>=<span class="ruby-identifier">target_endpoint</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">mep</span><span class="ruby-operator">==</span><span class="ruby-string">'one-way-out'</span>
+  <span class="ruby-identifier">result</span>=<span class="ruby-identifier">source_endpoint</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">mep</span><span class="ruby-operator">==</span><span class="ruby-string">'one-way-in'</span>
+  <span class="ruby-identifier">result</span>=<span class="ruby-identifier">source_endpoint</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">mep</span><span class="ruby-operator">==</span><span class="ruby-string">'request/reply'</span>
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">endpoint_type</span>=<span class="ruby-value">:consumer</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- consumer-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- consumer-method -->
+
+      
+        <div id="kind-method" class="method-detail ">
+          <a name="method-i-kind"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">kind</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="kind-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/connector_types/sequence.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">kind</span>
+  <span class="ruby-ivar">@kernel</span>.<span class="ruby-identifier">properties</span>(<span class="ruby-string">'Name'</span>).<span class="ruby-identifier">value</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- kind-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- kind-method -->
+
+      
+        <div id="mep-method" class="method-detail ">
+          <a name="method-i-mep"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mep</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="mep-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/connector_types/sequence.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mep</span>
+  <span class="ruby-identifier">result</span>=<span class="ruby-string">'unknown'</span>
+  <span class="ruby-identifier">target_mep</span>=<span class="ruby-identifier">target_endpoint</span>.<span class="ruby-identifier">mep</span>
+  <span class="ruby-identifier">source_mep</span>=<span class="ruby-identifier">source_endpoint</span>.<span class="ruby-identifier">mep</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">source_mep</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">source_mep</span><span class="ruby-operator">==</span><span class="ruby-string">'one-way-out'</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">target_mep</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">target_mep</span><span class="ruby-operator">==</span><span class="ruby-string">'one-way-in'</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">target_mep</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">target_mep</span><span class="ruby-operator">==</span><span class="ruby-string">'request/reply'</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- mep-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- mep-method -->
+
+      
+        <div id="provider-method" class="method-detail ">
+          <a name="method-i-provider"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">provider</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="provider-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/connector_types/sequence.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">provider</span>
+  <span class="ruby-identifier">result</span>=<span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Unknown MEP for sequence '#{name}'&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">mep</span><span class="ruby-operator">==</span><span class="ruby-string">'unknown'</span>
+  <span class="ruby-identifier">result</span>=<span class="ruby-identifier">source_endpoint</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">mep</span><span class="ruby-operator">==</span><span class="ruby-string">'one-way-out'</span>
+  <span class="ruby-identifier">result</span>=<span class="ruby-identifier">target_endpoint</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">mep</span><span class="ruby-operator">==</span><span class="ruby-string">'one-way-in'</span>
+  <span class="ruby-identifier">result</span>=<span class="ruby-identifier">target_endpoint</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">mep</span><span class="ruby-operator">==</span><span class="ruby-string">'request/reply'</span>
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">endpoint_type</span>=<span class="ruby-value">:provider</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- provider-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- provider-method -->
+
+      
+        <div id="source_endpoint-method" class="method-detail ">
+          <a name="method-i-source_endpoint"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">source_endpoint</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="source_endpoint-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/connector_types/sequence.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">source_endpoint</span>
+  <span class="ruby-ivar">@source_endpoint</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">EA</span><span class="ruby-operator">::</span><span class="ruby-constant">Services</span><span class="ruby-operator">::</span><span class="ruby-constant">Endpoint</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">source</span>, <span class="ruby-value">:source</span>, <span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- source_endpoint-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- source_endpoint-method -->
+
+      
+        <div id="target_endpoint-method" class="method-detail ">
+          <a name="method-i-target_endpoint"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">target_endpoint</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="target_endpoint-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/connector_types/sequence.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">target_endpoint</span>
+  <span class="ruby-ivar">@target_endpoint</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">EA</span><span class="ruby-operator">::</span><span class="ruby-constant">Services</span><span class="ruby-operator">::</span><span class="ruby-constant">Endpoint</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">target</span>, <span class="ruby-value">:target</span>, <span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- target_endpoint-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- target_endpoint-method -->
+
+      
+        <div id="to_s-method" class="method-detail ">
+          <a name="method-i-to_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_s</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="to_s-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/connector_types/sequence.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">c</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">consumer</span>
+  <span class="ruby-identifier">p</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">provider</span>
+  <span class="ruby-identifier">arrow</span> = <span class="ruby-string">&quot;&lt;-&gt;&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">mep</span><span class="ruby-operator">==</span><span class="ruby-string">'request/reply'</span>
+  <span class="ruby-identifier">arrow</span> = <span class="ruby-string">&quot;--&gt;&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">mep</span><span class="ruby-operator">==</span><span class="ruby-string">'one-way-in'</span>
+  <span class="ruby-identifier">arrow</span> = <span class="ruby-string">'&lt;--'</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">mep</span><span class="ruby-operator">==</span><span class="ruby-string">'one-way-out'</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-node">&quot;#{c.to_s}\t#{arrow}\t#{p.to_s}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_s-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="CP850"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=CP850" http-equiv="Content-Type" />
+
+  <title>Class: EA::ContainerTest</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../test/container_test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="test/container_test.rb">test/container_test.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Test::Unit::TestCase</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-setup">#setup</a></li>
+          
+          <li><a href="#method-i-teardown">#teardown</a></li>
+          
+          <li><a href="#method-i-test_add_package">#test_add_package</a></li>
+          
+          <li><a href="#method-i-test_add_requirement">#test_add_requirement</a></li>
+          
+          <li><a href="#method-i-test_element_access">#test_element_access</a></li>
+          
+          <li><a href="#method-i-test_find">#test_find</a></li>
+          
+          <li><a href="#method-i-test_package_container">#test_package_container</a></li>
+          
+          <li><a href="#method-i-test_package_navigation">#test_package_navigation</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../Gemfile.html">Gemfile</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="../nbproject/private/rake-d_txt.html">rake-d.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../EA.html">EA</a></li>
+        
+          <li><a href="../EA/Action.html">EA::Action</a></li>
+        
+          <li><a href="../EA/Activity.html">EA::Activity</a></li>
+        
+          <li><a href="../EA/ActivityPartition.html">EA::ActivityPartition</a></li>
+        
+          <li><a href="../EA/Actor.html">EA::Actor</a></li>
+        
+          <li><a href="../EA/Collection.html">EA::Collection</a></li>
+        
+          <li><a href="../EA/Component.html">EA::Component</a></li>
+        
+          <li><a href="../EA/Connector.html">EA::Connector</a></li>
+        
+          <li><a href="../EA/Container.html">EA::Container</a></li>
+        
+          <li><a href="../EA/ContainerTest.html">EA::ContainerTest</a></li>
+        
+          <li><a href="../EA/Dependency.html">EA::Dependency</a></li>
+        
+          <li><a href="../EA/Diagram.html">EA::Diagram</a></li>
+        
+          <li><a href="../EA/Element.html">EA::Element</a></li>
+        
+          <li><a href="../EA/Interaction.html">EA::Interaction</a></li>
+        
+          <li><a href="../EA/Interface.html">EA::Interface</a></li>
+        
+          <li><a href="../EA/Issue.html">EA::Issue</a></li>
+        
+          <li><a href="../EA/Klass.html">EA::Klass</a></li>
+        
+          <li><a href="../EA/Matrix.html">EA::Matrix</a></li>
+        
+          <li><a href="../EA/Method.html">EA::Method</a></li>
+        
+          <li><a href="../EA/Model.html">EA::Model</a></li>
+        
+          <li><a href="../EA/Note.html">EA::Note</a></li>
+        
+          <li><a href="../EA/OLEDelegate.html">EA::OLEDelegate</a></li>
+        
+          <li><a href="../EA/Package.html">EA::Package</a></li>
+        
+          <li><a href="../EA/Parameter.html">EA::Parameter</a></li>
+        
+          <li><a href="../EA/Port.html">EA::Port</a></li>
+        
+          <li><a href="../EA/ProvidedInterface.html">EA::ProvidedInterface</a></li>
+        
+          <li><a href="../EA/Realisation.html">EA::Realisation</a></li>
+        
+          <li><a href="../EA/Repository.html">EA::Repository</a></li>
+        
+          <li><a href="../EA/RequiredInterface.html">EA::RequiredInterface</a></li>
+        
+          <li><a href="../EA/Requirement.html">EA::Requirement</a></li>
+        
+          <li><a href="../EA/Sequence.html">EA::Sequence</a></li>
+        
+          <li><a href="../EA/Services.html">EA::Services</a></li>
+        
+          <li><a href="../EA/Services/Endpoint.html">EA::Services::Endpoint</a></li>
+        
+          <li><a href="../EA/StateNode.html">EA::StateNode</a></li>
+        
+          <li><a href="../EA/UseCase.html">EA::UseCase</a></li>
+        
+          <li><a href="../ActivityDiagramTest.html">ActivityDiagramTest</a></li>
+        
+          <li><a href="../InterfacesTest.html">InterfacesTest</a></li>
+        
+          <li><a href="../OleDelegateTest.html">OleDelegateTest</a></li>
+        
+          <li><a href="../RepoTest.html">RepoTest</a></li>
+        
+          <li><a href="../SequenceDiagramTest.html">SequenceDiagramTest</a></li>
+        
+          <li><a href="../TaggedValue.html">TaggedValue</a></li>
+        
+          <li><a href="../TraceabilityTest.html">TraceabilityTest</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">EA::ContainerTest</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="setup-method" class="method-detail ">
+          <a name="method-i-setup"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">setup</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="setup-source">
+<pre>
+<span class="ruby-comment"># File test/container_test.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+  <span class="ruby-ivar">@repo</span> = <span class="ruby-constant">Repository</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">@@dir</span><span class="ruby-operator">+</span><span class="ruby-string">'/eatest.eap'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- setup-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- setup-method -->
+
+      
+        <div id="teardown-method" class="method-detail ">
+          <a name="method-i-teardown"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">teardown</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="teardown-source">
+<pre>
+<span class="ruby-comment"># File test/container_test.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">teardown</span>
+  <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">close</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- teardown-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- teardown-method -->
+
+      
+        <div id="test_add_package-method" class="method-detail ">
+          <a name="method-i-test_add_package"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_add_package</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_add_package-source">
+<pre>
+<span class="ruby-comment"># File test/container_test.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_add_package</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;&gt;&gt;&gt; Start test_add_package #{Time.new}&quot;</span>
+  <span class="ruby-identifier">p</span>=<span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">models</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">packages</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">packages</span>.<span class="ruby-identifier">last</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">name</span><span class="ruby-operator">==</span><span class="ruby-string">'Primary Use Cases'</span>, <span class="ruby-node">&quot;unexpected Package name is #{p.name}&quot;</span>
+  <span class="ruby-identifier">n</span>=<span class="ruby-identifier">p</span>.<span class="ruby-identifier">packages</span>.<span class="ruby-identifier">size</span>
+  <span class="ruby-identifier">child</span>=<span class="ruby-identifier">p</span>.<span class="ruby-identifier">add_package</span>(<span class="ruby-string">'Domain3'</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">name</span><span class="ruby-operator">==</span><span class="ruby-string">'Domain3'</span>, <span class="ruby-node">&quot;unexpected Package name is #{child.name}&quot;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Package</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">packages</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-identifier">n</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>, <span class="ruby-node">&quot;unexpected number of packages: got #{p.packages.size}, expected #{n+1}&quot;</span>
+
+  <span class="ruby-identifier">child</span>.<span class="ruby-identifier">delete</span>
+  <span class="ruby-comment">#assert p.packages.size==n, &quot;unexpected number of packages: got #{p.packages.size}, expected #{n}&quot;</span>
+  <span class="ruby-comment">#assert p.packages.last.name=='Domain2'</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;&gt;&gt;&gt; End test_add_package #{Time.new}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_add_package-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_add_package-method -->
+
+      
+        <div id="test_add_requirement-method" class="method-detail ">
+          <a name="method-i-test_add_requirement"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_add_requirement</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_add_requirement-source">
+<pre>
+<span class="ruby-comment"># File test/container_test.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_add_requirement</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;&gt;&gt;&gt; Start test_add_requirement #{Time.new}&quot;</span>
+  <span class="ruby-identifier">p</span>=<span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">models</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">packages</span>[<span class="ruby-value">0</span>]
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">name</span><span class="ruby-operator">==</span><span class="ruby-string">'Requirements Model'</span>, <span class="ruby-node">&quot;unexpected Package name is #{p.name}&quot;</span>
+
+  <span class="ruby-comment"># Add a new child package</span>
+  <span class="ruby-identifier">portal_reqts</span>=<span class="ruby-identifier">p</span>.<span class="ruby-identifier">add_package</span>(<span class="ruby-string">'Portal Requirements'</span>)
+  
+  <span class="ruby-identifier">reqt</span>=<span class="ruby-identifier">portal_reqts</span>.<span class="ruby-identifier">add_element</span>(<span class="ruby-string">'Requirement 1'</span>,<span class="ruby-constant">Requirement</span>)
+  <span class="ruby-identifier">reqt</span>.<span class="ruby-identifier">notes</span>=<span class="ruby-string">&quot;This is requirement number 1&quot;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">reqt</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Element</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">reqt</span>.<span class="ruby-identifier">type</span><span class="ruby-operator">==</span><span class="ruby-string">&quot;Requirement&quot;</span>, <span class="ruby-node">&quot;unexpected element type is #{reqt.type}&quot;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">reqt</span>.<span class="ruby-identifier">notes</span><span class="ruby-operator">==</span><span class="ruby-string">&quot;This is requirement number 1&quot;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">portal_reqts</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-value">1</span>
+
+  <span class="ruby-identifier">reqt</span>.<span class="ruby-identifier">delete</span>
+  <span class="ruby-identifier">portal_reqts</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">portal_reqts</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>
+  <span class="ruby-identifier">portal_reqts</span>.<span class="ruby-identifier">delete</span>
+  <span class="ruby-identifier">p</span>.<span class="ruby-identifier">packages</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">packages</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-value">1</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;&gt;&gt;&gt; End test_add_requirement #{Time.new}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_add_requirement-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_add_requirement-method -->
+
+      
+        <div id="test_element_access-method" class="method-detail ">
+          <a name="method-i-test_element_access"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_element_access</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_element_access-source">
+<pre>
+<span class="ruby-comment"># File test/container_test.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_element_access</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;&gt;&gt;&gt; Start test_element_access at #{Time.new}&quot;</span>
+  <span class="ruby-identifier">p</span>=<span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">models</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">packages</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">packages</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">packages</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">name</span><span class="ruby-operator">==</span><span class="ruby-string">'Domain1'</span>, <span class="ruby-node">&quot;unexpected Package name is #{p.name}&quot;</span>
+
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-value">3</span>
+  <span class="ruby-identifier">a</span>=[]
+  <span class="ruby-identifier">p</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">assert</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Element</span>; <span class="ruby-identifier">a</span><span class="ruby-operator">&lt;&lt;</span><span class="ruby-identifier">e</span> }
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">name</span><span class="ruby-operator">==</span><span class="ruby-string">'Actor1'</span>, <span class="ruby-node">&quot;unexpected element name is #{a[0].name}&quot;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">type</span><span class="ruby-operator">==</span><span class="ruby-string">'Actor'</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">a</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">name</span><span class="ruby-operator">==</span><span class="ruby-string">'Use Case1'</span>, <span class="ruby-node">&quot;unexpected element name is #{a[1].name}&quot;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">a</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">type</span><span class="ruby-operator">==</span><span class="ruby-string">'UseCase'</span>, <span class="ruby-node">&quot;unexpected element type is #{a[1].type}&quot;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">a</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">name</span><span class="ruby-operator">==</span><span class="ruby-string">'Use Case2'</span>, <span class="ruby-node">&quot;unexpected element name is #{a[2].name}&quot;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">a</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">type</span><span class="ruby-operator">==</span><span class="ruby-string">'UseCase'</span>, <span class="ruby-node">&quot;unexpected element type is #{a[2].type}&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;&gt;&gt;&gt; End test_element_access at #{Time.new}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_element_access-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_element_access-method -->
+
+      
+        <div id="test_find-method" class="method-detail ">
+          <a name="method-i-test_find"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_find</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>def test_open_repo</p>
+
+<pre>puts &quot;&gt;&gt;&gt; Start test_open_repo at #{Time.new}&quot;
+els=@repo.get_elements(UseCase)
+assert els.count==4, &quot;Got #{els.count} use-cases, expected 4.&quot;
+els=@repo.get_elements(Component)
+assert els.count==3, &quot;Got #{els.count} components, expected 3.&quot;
+puts &quot;&gt;&gt;&gt; End test_open_repo at #{Time.new}&quot;</pre>
+
+<p>end</p>
+            
+
+            
+            <div class="method-source-code" id="test_find-source">
+<pre>
+<span class="ruby-comment"># File test/container_test.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_find</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;&gt;&gt;&gt; Start test_find at #{Time.new}&quot;</span>
+  <span class="ruby-identifier">p</span>=<span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">models</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">packages</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">packages</span>.<span class="ruby-identifier">last</span>
+  <span class="ruby-identifier">target</span>=<span class="ruby-identifier">p</span>.<span class="ruby-identifier">packages</span>[<span class="ruby-value">1</span>]
+  <span class="ruby-identifier">idx</span>=<span class="ruby-identifier">p</span>.<span class="ruby-identifier">packages</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">target</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">idx</span><span class="ruby-operator">==</span><span class="ruby-value">1</span>
+
+  <span class="ruby-identifier">false_target</span>=<span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">models</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">packages</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">idx</span>=<span class="ruby-identifier">p</span>.<span class="ruby-identifier">packages</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">false_target</span>)
+  <span class="ruby-identifier">assert_nil</span> <span class="ruby-identifier">idx</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;&gt;&gt;&gt; End test_find at #{Time.new}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_find-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_find-method -->
+
+      
+        <div id="test_package_container-method" class="method-detail ">
+          <a name="method-i-test_package_container"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_package_container</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_package_container-source">
+<pre>
+<span class="ruby-comment"># File test/container_test.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_package_container</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;&gt;&gt;&gt; Start test_package_container at #{Time.new}&quot;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">models</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-value">1</span>
+  <span class="ruby-identifier">m</span> = <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">models</span>[<span class="ruby-value">0</span>]
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Model</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">name</span><span class="ruby-operator">==</span><span class="ruby-string">'Model'</span>
+
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">packages</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-value">7</span>, <span class="ruby-node">&quot;Expected 7 packages, got #{m.packages.size}&quot;</span>
+
+  <span class="ruby-identifier">p</span>=<span class="ruby-identifier">m</span>.<span class="ruby-identifier">packages</span>[<span class="ruby-value">0</span>]
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Package</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">name</span><span class="ruby-operator">==</span><span class="ruby-string">'Requirements Model'</span>, <span class="ruby-node">&quot;unexpected Package name is #{p.name}&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;&gt;&gt;&gt; End test_package_container at #{Time.new}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_package_container-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_package_container-method -->
+
+      
+        <div id="test_package_navigation-method" class="method-detail ">
+          <a name="method-i-test_package_navigation"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_package_navigation</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_package_navigation-source">
+<pre>
+<span class="ruby-comment"># File test/container_test.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_package_navigation</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;&gt;&gt;&gt; Start test_package_navigation at #{Time.new}&quot;</span>
+  <span class="ruby-identifier">p</span>=<span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">models</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">packages</span>[<span class="ruby-value">1</span>]
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">name</span><span class="ruby-operator">==</span><span class="ruby-string">'Use Case Model'</span>, <span class="ruby-node">&quot;unexpected Package name is #{p.name}&quot;</span>
+  <span class="ruby-identifier">p</span>=<span class="ruby-identifier">p</span>.<span class="ruby-identifier">packages</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">name</span><span class="ruby-operator">==</span><span class="ruby-string">'Primary Use Cases'</span>, <span class="ruby-node">&quot;unexpected Package name is #{p.name}&quot;</span>
+  <span class="ruby-identifier">p</span>=<span class="ruby-identifier">p</span>.<span class="ruby-identifier">packages</span>[<span class="ruby-value">1</span>]
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">name</span><span class="ruby-operator">==</span><span class="ruby-string">'Domain2'</span>, <span class="ruby-node">&quot;unexpected Package name is #{p.name}&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;&gt;&gt;&gt; End test_package_navigation at #{Time.new}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_package_navigation-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_package_navigation-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

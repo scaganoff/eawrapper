@@ -1,0 +1,6 @@
+== EAWrapper
+
+This library is a ruby wrapper around the COM API for Sparx
+Enterprise Architect version 8.
+
+This is alpha level code and highly incomplete. Use at your own risk.

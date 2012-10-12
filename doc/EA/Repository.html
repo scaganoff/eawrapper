@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="CP850"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=CP850" http-equiv="Content-Type" />
+
+  <title>Class: EA::Repository</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/eawrapper/repository_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/eawrapper/repository.rb">lib/eawrapper/repository.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="OLEDelegate.html">EA::OLEDelegate</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-connect">::connect</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-open">::open</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-get_component">#get_component</a></li>
+          
+          <li><a href="#method-i-get_connector">#get_connector</a></li>
+          
+          <li><a href="#method-i-get_diagram">#get_diagram</a></li>
+          
+          <li><a href="#method-i-get_diagram_by_name">#get_diagram_by_name</a></li>
+          
+          <li><a href="#method-i-get_element">#get_element</a></li>
+          
+          <li><a href="#method-i-get_element_by_name">#get_element_by_name</a></li>
+          
+          <li><a href="#method-i-get_elements">#get_elements</a></li>
+          
+          <li><a href="#method-i-get_model_by_name">#get_model_by_name</a></li>
+          
+          <li><a href="#method-i-get_package">#get_package</a></li>
+          
+          <li><a href="#method-i-get_package_by_name">#get_package_by_name</a></li>
+          
+          <li><a href="#method-i-get_selected_element">#get_selected_element</a></li>
+          
+          <li><a href="#method-i-method_missing">#method_missing</a></li>
+          
+          <li><a href="#method-i-search">#search</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../Gemfile.html">Gemfile</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="../nbproject/private/rake-d_txt.html">rake-d.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../EA.html">EA</a></li>
+        
+          <li><a href="../EA/Action.html">EA::Action</a></li>
+        
+          <li><a href="../EA/Activity.html">EA::Activity</a></li>
+        
+          <li><a href="../EA/ActivityPartition.html">EA::ActivityPartition</a></li>
+        
+          <li><a href="../EA/Actor.html">EA::Actor</a></li>
+        
+          <li><a href="../EA/Collection.html">EA::Collection</a></li>
+        
+          <li><a href="../EA/Component.html">EA::Component</a></li>
+        
+          <li><a href="../EA/Connector.html">EA::Connector</a></li>
+        
+          <li><a href="../EA/Container.html">EA::Container</a></li>
+        
+          <li><a href="../EA/ContainerTest.html">EA::ContainerTest</a></li>
+        
+          <li><a href="../EA/Dependency.html">EA::Dependency</a></li>
+        
+          <li><a href="../EA/Diagram.html">EA::Diagram</a></li>
+        
+          <li><a href="../EA/Element.html">EA::Element</a></li>
+        
+          <li><a href="../EA/Interaction.html">EA::Interaction</a></li>
+        
+          <li><a href="../EA/Interface.html">EA::Interface</a></li>
+        
+          <li><a href="../EA/Issue.html">EA::Issue</a></li>
+        
+          <li><a href="../EA/Klass.html">EA::Klass</a></li>
+        
+          <li><a href="../EA/Matrix.html">EA::Matrix</a></li>
+        
+          <li><a href="../EA/Method.html">EA::Method</a></li>
+        
+          <li><a href="../EA/Model.html">EA::Model</a></li>
+        
+          <li><a href="../EA/Note.html">EA::Note</a></li>
+        
+          <li><a href="../EA/OLEDelegate.html">EA::OLEDelegate</a></li>
+        
+          <li><a href="../EA/Package.html">EA::Package</a></li>
+        
+          <li><a href="../EA/Parameter.html">EA::Parameter</a></li>
+        
+          <li><a href="../EA/Port.html">EA::Port</a></li>
+        
+          <li><a href="../EA/ProvidedInterface.html">EA::ProvidedInterface</a></li>
+        
+          <li><a href="../EA/Realisation.html">EA::Realisation</a></li>
+        
+          <li><a href="../EA/Repository.html">EA::Repository</a></li>
+        
+          <li><a href="../EA/RequiredInterface.html">EA::RequiredInterface</a></li>
+        
+          <li><a href="../EA/Requirement.html">EA::Requirement</a></li>
+        
+          <li><a href="../EA/Sequence.html">EA::Sequence</a></li>
+        
+          <li><a href="../EA/Services.html">EA::Services</a></li>
+        
+          <li><a href="../EA/Services/Endpoint.html">EA::Services::Endpoint</a></li>
+        
+          <li><a href="../EA/StateNode.html">EA::StateNode</a></li>
+        
+          <li><a href="../EA/UseCase.html">EA::UseCase</a></li>
+        
+          <li><a href="../ActivityDiagramTest.html">ActivityDiagramTest</a></li>
+        
+          <li><a href="../InterfacesTest.html">InterfacesTest</a></li>
+        
+          <li><a href="../OleDelegateTest.html">OleDelegateTest</a></li>
+        
+          <li><a href="../RepoTest.html">RepoTest</a></li>
+        
+          <li><a href="../SequenceDiagramTest.html">SequenceDiagramTest</a></li>
+        
+          <li><a href="../TaggedValue.html">TaggedValue</a></li>
+        
+          <li><a href="../TraceabilityTest.html">TraceabilityTest</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">EA::Repository</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="models-attribute-method" class="method-detail">
+          <a name="models"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">models</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="connect-method" class="method-detail ">
+          <a name="method-c-connect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">connect</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="connect-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Repository</span>.<span class="ruby-identifier">connect</span>
+  <span class="ruby-identifier">app</span>=<span class="ruby-constant">WIN32OLE</span>.<span class="ruby-identifier">connect</span>(<span class="ruby-string">'EA.App'</span>)
+  <span class="ruby-identifier">repo</span>=<span class="ruby-identifier">app</span>.<span class="ruby-constant">Repository</span>
+  <span class="ruby-constant">Repository</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">repo</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- connect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- connect-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(win32_repo)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">win32_repo</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">win32_repo</span>, <span class="ruby-keyword">self</span>)
+  <span class="ruby-ivar">@models</span>=<span class="ruby-constant">Collection</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@kernel</span>.<span class="ruby-constant">Models</span>, <span class="ruby-keyword">self</span>, <span class="ruby-constant">Model</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="open-method" class="method-detail ">
+          <a name="method-c-open"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">open</span><span
+              class="method-args">(filename)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="open-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Repository</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;File doesn't exist: '#{filename}'&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-identifier">filename</span>
+  <span class="ruby-identifier">repo</span> = <span class="ruby-constant">WIN32OLE</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">'EA.Repository'</span>
+  <span class="ruby-identifier">fso</span>=<span class="ruby-constant">WIN32OLE</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">'Scripting.FileSystemObject'</span>)
+  <span class="ruby-identifier">path</span>=<span class="ruby-identifier">fso</span>.<span class="ruby-constant">GetAbsolutePathName</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-identifier">repo</span>.<span class="ruby-constant">OpenFile</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-constant">Repository</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">repo</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- open-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- open-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="close-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>
+  <span class="ruby-ivar">@kernel</span>.<span class="ruby-constant">CloseFile</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+
+      
+        <div id="get_component-method" class="method-detail ">
+          <a name="method-i-get_component"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_component</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_component-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_component</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">rs</span>=<span class="ruby-identifier">search</span>(<span class="ruby-identifier">name</span>,<span class="ruby-string">'Element Name'</span>)
+  <span class="ruby-identifier">result</span>=[]
+  <span class="ruby-identifier">rs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">create_element</span>(<span class="ruby-identifier">e</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">e</span>.<span class="ruby-constant">Type</span><span class="ruby-operator">==</span><span class="ruby-string">'Component'</span>
+    <span class="ruby-keyword">rescue</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">first</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_component-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_component-method -->
+
+      
+        <div id="get_connector-method" class="method-detail ">
+          <a name="method-i-get_connector"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_connector</span><span
+              class="method-args">(id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_connector-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_connector</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">c</span>=<span class="ruby-keyword">self</span>.<span class="ruby-constant">GetConnectorByID</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-constant">Connector</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">c</span>,<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_connector-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_connector-method -->
+
+      
+        <div id="get_diagram-method" class="method-detail ">
+          <a name="method-i-get_diagram"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_diagram</span><span
+              class="method-args">(id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_diagram-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_diagram</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">d</span>=<span class="ruby-ivar">@kernel</span>.<span class="ruby-constant">GetDiagramByID</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-constant">Diagram</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">d</span>,<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_diagram-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_diagram-method -->
+
+      
+        <div id="get_diagram_by_name-method" class="method-detail ">
+          <a name="method-i-get_diagram_by_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_diagram_by_name</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_diagram_by_name-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_diagram_by_name</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">a</span>=<span class="ruby-identifier">name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'/'</span>)
+  <span class="ruby-identifier">diag_name</span>=<span class="ruby-identifier">a</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-identifier">pkg_name</span>=<span class="ruby-identifier">a</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">'/'</span>)
+  <span class="ruby-identifier">pkg</span>=<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_package_by_name</span>(<span class="ruby-identifier">pkg_name</span>)
+  <span class="ruby-identifier">result</span>=<span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">pkg</span>.<span class="ruby-constant">Diagrams</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">d</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">name</span><span class="ruby-operator">==</span><span class="ruby-identifier">diag_name</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">result</span>=<span class="ruby-constant">Diagram</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">d</span>,<span class="ruby-keyword">self</span>,<span class="ruby-identifier">d</span>.<span class="ruby-identifier">type</span>)
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_diagram_by_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_diagram_by_name-method -->
+
+      
+        <div id="get_element-method" class="method-detail ">
+          <a name="method-i-get_element"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_element</span><span
+              class="method-args">(id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_element-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_element</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">el</span>=<span class="ruby-ivar">@kernel</span>.<span class="ruby-constant">GetElementByID</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">create_element</span>(<span class="ruby-identifier">el</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_element-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_element-method -->
+
+      
+        <div id="get_element_by_name-method" class="method-detail ">
+          <a name="method-i-get_element_by_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_element_by_name</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_element_by_name-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_element_by_name</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">a</span>=<span class="ruby-identifier">name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'/'</span>)
+  <span class="ruby-keyword">begin</span>; <span class="ruby-identifier">n</span>=<span class="ruby-identifier">a</span>.<span class="ruby-identifier">shift</span>; <span class="ruby-keyword">end</span> <span class="ruby-keyword">while</span> <span class="ruby-identifier">n</span><span class="ruby-operator">==</span><span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-identifier">m</span>=<span class="ruby-identifier">get_model_by_name</span>(<span class="ruby-identifier">n</span>)
+  <span class="ruby-identifier">m</span>.<span class="ruby-identifier">get_element_by_name</span>(<span class="ruby-identifier">a</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">'/'</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_element_by_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_element_by_name-method -->
+
+      
+        <div id="get_elements-method" class="method-detail ">
+          <a name="method-i-get_elements"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_elements</span><span
+              class="method-args">(type_filter=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_elements-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_elements</span>(<span class="ruby-identifier">type_filter</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@all_elements</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@kernel</span>.<span class="ruby-constant">GetElementSet</span>(<span class="ruby-string">''</span>,<span class="ruby-value">0</span>)
+    <span class="ruby-ivar">@all_elements</span>=<span class="ruby-identifier">extract_elements</span>(<span class="ruby-identifier">result</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">result</span>=[]
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">type_filter</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">result</span>=<span class="ruby-ivar">@all_elements</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">result</span>=<span class="ruby-ivar">@all_elements</span>.<span class="ruby-identifier">find_all</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-identifier">type_filter</span>)}
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_elements-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_elements-method -->
+
+      
+        <div id="get_model_by_name-method" class="method-detail ">
+          <a name="method-i-get_model_by_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_model_by_name</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_model_by_name-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_model_by_name</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">result</span>=<span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@models</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">name</span><span class="ruby-operator">==</span><span class="ruby-identifier">name</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">result</span>=<span class="ruby-identifier">m</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_model_by_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_model_by_name-method -->
+
+      
+        <div id="get_package-method" class="method-detail ">
+          <a name="method-i-get_package"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_package</span><span
+              class="method-args">(id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_package-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_package</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">p</span>=<span class="ruby-ivar">@kernel</span>.<span class="ruby-constant">GetPackageByID</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-constant">Package</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">p</span>,<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_package-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_package-method -->
+
+      
+        <div id="get_package_by_name-method" class="method-detail ">
+          <a name="method-i-get_package_by_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_package_by_name</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_package_by_name-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_package_by_name</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">a</span>=<span class="ruby-identifier">name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'/'</span>)
+  <span class="ruby-keyword">begin</span>; <span class="ruby-identifier">n</span>=<span class="ruby-identifier">a</span>.<span class="ruby-identifier">shift</span>; <span class="ruby-keyword">end</span> <span class="ruby-keyword">while</span> <span class="ruby-identifier">n</span><span class="ruby-operator">==</span><span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-identifier">m</span>=<span class="ruby-identifier">get_model_by_name</span>(<span class="ruby-identifier">n</span>)
+  <span class="ruby-identifier">m</span>.<span class="ruby-identifier">get_package_by_name</span>(<span class="ruby-identifier">a</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">'/'</span>)) 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_package_by_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_package_by_name-method -->
+
+      
+        <div id="get_selected_element-method" class="method-detail ">
+          <a name="method-i-get_selected_element"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_selected_element</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_selected_element-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_selected_element</span>()
+  <span class="ruby-identifier">create_element</span>(<span class="ruby-ivar">@kernel</span>.<span class="ruby-constant">GetTreeSelectedObject</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_selected_element-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_selected_element-method -->
+
+      
+        <div id="method_missing-method" class="method-detail ">
+          <a name="method-i-method_missing"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">method_missing</span><span
+              class="method-args">(sym, *args, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="method_missing-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">sym</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">sym</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- method_missing-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- method_missing-method -->
+
+      
+        <div id="search-method" class="method-detail ">
+          <a name="method-i-search"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">search</span><span
+              class="method-args">(search_term, search_name='Simple')</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="search-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/repository.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">search</span>(<span class="ruby-identifier">search_term</span>, <span class="ruby-identifier">search_name</span>=<span class="ruby-string">'Simple'</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@kernel</span>.<span class="ruby-constant">GetElementsByQuery</span>(<span class="ruby-identifier">search_name</span>, <span class="ruby-identifier">search_term</span>)
+  <span class="ruby-identifier">extract_elements</span>(<span class="ruby-identifier">result</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- search-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- search-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+select * from t_object a, t_object b where a.parent_id=b.
+
+
+select * from t_object where t_object.Object_Type="Action"
+
+
+select object_id from t_object where t_object.Object_Type="Component" and t_object.Name="Customer Information System" = 2512
+
+
+All CIS Swimlanes:
+select * from t_object where t_object.Object_Type="ActivityPartition" and t_object.Classifier=2152
+
+SELECT ea_guid AS CLASSGUID, Object_Type AS CLASSTYPE, Name FROM t_object
+where t_object.Object_Type="ActivityPartition" and t_object.Classifier=2152
+
+SELECT object_id FROM t_object
+where t_object.Object_Type="ActivityPartition" and t_object.Classifier=2152
+
+SELECT ea_guid AS CLASSGUID, Object_Type AS CLASSTYPE, Name FROM t_object
+where t_object.Object_Type="Action" and t_object.parentID in (SELECT object_id 
+FROM t_object where t_object.Object_Type="ActivityPartition" and t_object.Classifier=2152)
+
+
+SELECT ea_guid AS CLASSGUID, Object_Type AS CLASSTYPE, Name FROM t_object INNER JOIN t_
+where t_object.Object_Type="Action" 
+
+and t_object.parentID in (SELECT object_id 
+FROM t_object where t_object.Object_Type="ActivityPartition" and t_object.Classifier=2152)
+

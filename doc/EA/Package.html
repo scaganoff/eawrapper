@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="CP850"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=CP850" http-equiv="Content-Type" />
+
+  <title>Class: EA::Package</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/eawrapper/package_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/eawrapper/package.rb">lib/eawrapper/package.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="OLEDelegate.html">EA::OLEDelegate</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-3D-3D">#==</a></li>
+          
+          <li><a href="#method-i-add_element">#add_element</a></li>
+          
+          <li><a href="#method-i-add_package">#add_package</a></li>
+          
+          <li><a href="#method-i-delete">#delete</a></li>
+          
+          <li><a href="#method-i-eql-3F">#eql?</a></li>
+          
+          <li><a href="#method-i-hash">#hash</a></li>
+          
+          <li><a href="#method-i-method_missing">#method_missing</a></li>
+          
+          <li><a href="#method-i-package_id">#package_id</a></li>
+          
+          <li><a href="#method-i-path">#path</a></li>
+          
+          <li><a href="#method-i-push_package">#push_package</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="Container.html">EA::Container</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../Gemfile.html">Gemfile</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="../nbproject/private/rake-d_txt.html">rake-d.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../EA.html">EA</a></li>
+        
+          <li><a href="../EA/Action.html">EA::Action</a></li>
+        
+          <li><a href="../EA/Activity.html">EA::Activity</a></li>
+        
+          <li><a href="../EA/ActivityPartition.html">EA::ActivityPartition</a></li>
+        
+          <li><a href="../EA/Actor.html">EA::Actor</a></li>
+        
+          <li><a href="../EA/Collection.html">EA::Collection</a></li>
+        
+          <li><a href="../EA/Component.html">EA::Component</a></li>
+        
+          <li><a href="../EA/Connector.html">EA::Connector</a></li>
+        
+          <li><a href="../EA/Container.html">EA::Container</a></li>
+        
+          <li><a href="../EA/ContainerTest.html">EA::ContainerTest</a></li>
+        
+          <li><a href="../EA/Dependency.html">EA::Dependency</a></li>
+        
+          <li><a href="../EA/Diagram.html">EA::Diagram</a></li>
+        
+          <li><a href="../EA/Element.html">EA::Element</a></li>
+        
+          <li><a href="../EA/Interaction.html">EA::Interaction</a></li>
+        
+          <li><a href="../EA/Interface.html">EA::Interface</a></li>
+        
+          <li><a href="../EA/Issue.html">EA::Issue</a></li>
+        
+          <li><a href="../EA/Klass.html">EA::Klass</a></li>
+        
+          <li><a href="../EA/Matrix.html">EA::Matrix</a></li>
+        
+          <li><a href="../EA/Method.html">EA::Method</a></li>
+        
+          <li><a href="../EA/Model.html">EA::Model</a></li>
+        
+          <li><a href="../EA/Note.html">EA::Note</a></li>
+        
+          <li><a href="../EA/OLEDelegate.html">EA::OLEDelegate</a></li>
+        
+          <li><a href="../EA/Package.html">EA::Package</a></li>
+        
+          <li><a href="../EA/Parameter.html">EA::Parameter</a></li>
+        
+          <li><a href="../EA/Port.html">EA::Port</a></li>
+        
+          <li><a href="../EA/ProvidedInterface.html">EA::ProvidedInterface</a></li>
+        
+          <li><a href="../EA/Realisation.html">EA::Realisation</a></li>
+        
+          <li><a href="../EA/Repository.html">EA::Repository</a></li>
+        
+          <li><a href="../EA/RequiredInterface.html">EA::RequiredInterface</a></li>
+        
+          <li><a href="../EA/Requirement.html">EA::Requirement</a></li>
+        
+          <li><a href="../EA/Sequence.html">EA::Sequence</a></li>
+        
+          <li><a href="../EA/Services.html">EA::Services</a></li>
+        
+          <li><a href="../EA/Services/Endpoint.html">EA::Services::Endpoint</a></li>
+        
+          <li><a href="../EA/StateNode.html">EA::StateNode</a></li>
+        
+          <li><a href="../EA/UseCase.html">EA::UseCase</a></li>
+        
+          <li><a href="../ActivityDiagramTest.html">ActivityDiagramTest</a></li>
+        
+          <li><a href="../InterfacesTest.html">InterfacesTest</a></li>
+        
+          <li><a href="../OleDelegateTest.html">OleDelegateTest</a></li>
+        
+          <li><a href="../RepoTest.html">RepoTest</a></li>
+        
+          <li><a href="../SequenceDiagramTest.html">SequenceDiagramTest</a></li>
+        
+          <li><a href="../TaggedValue.html">TaggedValue</a></li>
+        
+          <li><a href="../TraceabilityTest.html">TraceabilityTest</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">EA::Package</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="parent-attribute-method" class="method-detail">
+          <a name="parent"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">parent</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(kernel, repo)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/package.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">kernel</span>, <span class="ruby-identifier">repo</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">kernel</span>, <span class="ruby-identifier">repo</span>)
+  <span class="ruby-ivar">@name</span> = <span class="ruby-ivar">@kernel</span>.<span class="ruby-identifier">name</span>
+  <span class="ruby-identifier">pid</span> = <span class="ruby-ivar">@kernel</span>.<span class="ruby-constant">ParentID</span>
+  <span class="ruby-ivar">@parent</span>=<span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">get_package</span>(<span class="ruby-identifier">pid</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">pid</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">init_collections</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Error initialising collections for '#{kernel.Name}' of type '#{kernel.Type}'&quot;</span>
+    <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="3D-3D-method" class="method-detail ">
+          <a name="method-i-3D-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">==</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="3D-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/package.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Package</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">package_id</span><span class="ruby-operator">==</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">package_id</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 3D-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 3D-3D-method -->
+
+      
+        <div id="add_element-method" class="method-detail ">
+          <a name="method-i-add_element"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">add_element</span><span
+              class="method-args">(name, type)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="add_element-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/package.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_element</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">type</span>)
+  <span class="ruby-ivar">@elements</span>.<span class="ruby-identifier">add_new</span>(<span class="ruby-identifier">name</span>,<span class="ruby-identifier">type</span>.<span class="ruby-identifier">to_s</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- add_element-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- add_element-method -->
+
+      
+        <div id="add_package-method" class="method-detail ">
+          <a name="method-i-add_package"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">add_package</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="add_package-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/package.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_package</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-ivar">@packages</span>.<span class="ruby-identifier">add_new</span>(<span class="ruby-identifier">name</span>,<span class="ruby-string">&quot;Nothing&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- add_package-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- add_package-method -->
+
+      
+        <div id="delete-method" class="method-detail ">
+          <a name="method-i-delete"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">delete</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="delete-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/package.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete</span>
+  <span class="ruby-identifier">idx</span>=<span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">packages</span>.<span class="ruby-identifier">find</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">packages</span>.<span class="ruby-identifier">delete_at</span>(<span class="ruby-identifier">idx</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- delete-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- delete-method -->
+
+      
+        <div id="eql-3F-method" class="method-detail ">
+          <a name="method-i-eql-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">eql?</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="eql-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/package.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Package</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">package_id</span><span class="ruby-operator">==</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">package_id</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- eql-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- eql-3F-method -->
+
+      
+        <div id="hash-method" class="method-detail ">
+          <a name="method-i-hash"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">hash</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="hash-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/package.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">hash</span>
+  <span class="ruby-identifier">packageguid</span>.<span class="ruby-identifier">hash</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- hash-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- hash-method -->
+
+      
+        <div id="method_missing-method" class="method-detail ">
+          <a name="method-i-method_missing"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">method_missing</span><span
+              class="method-args">(sym, *args, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="method_missing-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/package.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">sym</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">sym</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- method_missing-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- method_missing-method -->
+
+      
+        <div id="package_id-method" class="method-detail ">
+          <a name="method-i-package_id"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">package_id</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="package_id-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/package.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">package_id</span>
+  <span class="ruby-ivar">@kernel</span>.<span class="ruby-constant">PackageID</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- package_id-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- package_id-method -->
+
+      
+        <div id="path-method" class="method-detail ">
+          <a name="method-i-path"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">path</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="path-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/package.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-identifier">s</span>=<span class="ruby-identifier">push_package</span>([])
+  <span class="ruby-string">'/'</span><span class="ruby-operator">+</span><span class="ruby-identifier">s</span>.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">'/'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- path-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- path-method -->
+
+      
+        <div id="push_package-method" class="method-detail ">
+          <a name="method-i-push_package"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">push_package</span><span
+              class="method-args">(stack)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="push_package-source">
+<pre>
+<span class="ruby-comment"># File lib/eawrapper/package.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">push_package</span>(<span class="ruby-identifier">stack</span>)
+  <span class="ruby-identifier">stack</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">push_package</span>(<span class="ruby-identifier">stack</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">stack</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- push_package-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- push_package-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
