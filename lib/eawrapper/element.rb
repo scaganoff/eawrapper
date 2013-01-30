@@ -49,6 +49,7 @@ module EA
       @connectors=Collection.new(@kernel.Connectors, @repo, Connector)
       @embedded_elements=Collection.new(@kernel.EmbeddedElements, @repo, Element)
       @methods=Collection.new(@kernel.Methods, @repo, Method)
+      @attributes=Collection.new(@kernel.Attributes, @repo, Attribute)
       @name=self.name
       @type=self.type
 
