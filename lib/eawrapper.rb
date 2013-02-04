@@ -7,6 +7,7 @@
 $:.unshift File.dirname(__FILE__)
 
 require 'eawrapper/ole_delegate'
+require 'eawrapper/attribute'
 require 'eawrapper/container'
 require 'eawrapper/collection'
 require 'eawrapper/repository'

@@ -17,5 +17,28 @@ module EA
       @repo.get_element(@kernel.ParentID)
     end
 
+    def return_type=(type)
+      @kernel.ReturnType=type
+      @kernel.Update
+    end
+
+    def return_type
+      @kernel.ReturnType
+    end
+
+    def add_stereotype(st)
+      list=@kernel.stereotype
+      list=list.split(",")
+      list<<st
+      newlist=list.join(",")
+      @kernel.StereoType=newlist
+      @kernel.Update
+    end
+
+    def stereotypes
+      list=@kernel.Stereotype
+      list.split(",")
+    end
+
   end
 end

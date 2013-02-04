@@ -39,6 +39,7 @@ module EA
     end
 
     def add_new(name, type=nil)
+      type="Class" if type=="EA::Klass"
       obj=@kernel.AddNew(name,type)
       obj.Update
       @kernel.Refresh
@@ -47,6 +48,8 @@ module EA
         result=Element.new(obj,@repo,type)
       when "EA::Package" then
         result=Package.new(obj,@repo)
+      when "EA::Method" then
+        result=EA::Method.new(obj,@repo)
       end
       result
     end
