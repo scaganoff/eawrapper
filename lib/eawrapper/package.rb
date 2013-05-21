@@ -33,20 +33,18 @@ module EA
       '/'+s.reverse.join('/')
     end
 
-    def push_package(stack)
-      stack.push(name)
-      unless @parent.nil? then
-        @parent.push_package(stack)
-      end
-      stack
-    end
-
     def add_package(name)
       @packages.add_new(name,"Nothing")
     end
 
     def add_element(name, type)
       @elements.add_new(name,type.to_s)
+    end
+
+    def move(new_parent)
+      @kernel.ParentID=new_parent.PackageID
+      @kernel.Update
+      @parent=new_parent
     end
 
     def delete
@@ -70,6 +68,16 @@ module EA
 
     def hash
       packageguid.hash
+    end
+
+private
+
+    def push_package(stack)
+      stack.push(name)
+      unless @parent.nil? then
+        @parent.push_package(stack)
+      end
+      stack
     end
 
   end
