@@ -42,6 +42,16 @@ module EA
     end
 
     def get_element(id)
+      #puts "DEBUG get_element class #{id.class}"
+      if id.class == Fixnum
+      then get_element_by_id(id)
+      elsif /^\{.*\}$/ =~ id
+        then get_element_by_guid(id)
+        else get_element_by_name(id)
+      end
+    end
+
+    def get_element_by_id(id)
       el=@kernel.GetElementByID(id)
       create_element(el)
     end
@@ -143,8 +153,9 @@ module EA
 
     private
     def create_element(kernel)
-      #puts "DEBUG>> Create element '#{kernel.name}'"
+      #puts "DEBUG>> Create element '#{kernel.name}' '#{kernel.Type}'"
       klass=get_klass(kernel.Type)
+
       case klass.to_s               # case statement doesn't work with constants
       when "EA::Package"
         pkg_kernel=get_package_of_element(kernel)

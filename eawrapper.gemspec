@@ -4,7 +4,7 @@ $:.unshift(lib) unless $:.include?(lib)
 
 spec = Gem::Specification.new do |s|
   s.name = 'eawrapper'
-  s.version = '0.0.28'
+  s.version = '0.0.29'
   s.has_rdoc = true
   s.extra_rdoc_files = ['README', 'LICENSE']
   s.summary = 'Ruby wrapper for Sparx Enterprise Architect'

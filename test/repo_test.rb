@@ -35,13 +35,28 @@ class RepoTest < Test::Unit::TestCase
   end
 
   def test_get_element_by_name
-    e=@repo.get_element_by_name('Model/Requirements Model/Functional/Reqt1')
+    e=@repo.get_element('Model/Requirements Model/Functional/Reqt1')
     assert e.name=='Reqt1'
     assert e.is_a? EA::Element
     assert e.type=='Requirement'
+
+    guid = e.element_GUID
+    e=@repo.get_element(guid)
+    assert e.name=='Reqt1'
+    assert e.is_a? EA::Element
+    assert e.type=='Requirement'
+
+    id=e.element_id
+    e=@repo.get_element(id)
+    assert e.name=='Reqt1'
+    assert e.is_a? EA::Element
+    assert e.type=='Requirement'
+
+
+
   end
 
-  def test_get_package_as_element
+   def test_get_package_as_element
     e=@repo.get_element(7)  # Package "Domain2" is associated with ElementID=7
     assert e.is_a? EA::Package
     assert e.packageid==8
