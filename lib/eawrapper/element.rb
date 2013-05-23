@@ -81,6 +81,7 @@ module EA
     def element_GUID
       @kernel.ElementGUID
     end
+
     def delete
       idx=@package.elements.find(self)
       @package.elements.delete_at(idx)
