@@ -19,6 +19,7 @@ module EA
     def get_child_package(name)
 #      puts "DEBUG> get_child_package('#{name}')"
       result=nil
+      @packages.refresh  #force a refresh as the WSDL generator does not refresh
       @packages.each do |p|
         if p.name==name then
           result=p
