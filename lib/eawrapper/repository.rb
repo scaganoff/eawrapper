@@ -41,36 +41,26 @@ module EA
       @kernel.CloseFile
     end
 
-    def get_element(id)
-      el=@kernel.GetElementByID(id)
-      create_element(el)
+    def get_element(arg)
+      #puts "DEBUG get_element class #{id.class}"
+      if arg.class == Fixnum
+      then get_element_by_id(arg)
+      elsif /^\{.*\}$/ =~ arg
+        then get_element_by_guid(arg)
+        else get_element_by_name(arg)
+      end
     end
 
-    def get_element_by_name(name)
-      a=name.split('/')
-      begin; n=a.shift; end while n==""
-      m=get_model_by_name(n)
-      m.get_element_by_name(a.join('/'))
+    def get_package(arg)
+      if arg.class == Fixnum
+      then get_package_by_id(arg)
+      elsif /^\{.*\}$/ =~ arg
+      then get_package_by_guid(arg)
+      else get_package_by_name(arg)
+      end
     end
 
-    def get_element_by_guid(guid)
-      e=@kernel.GetElementByGUID(guid)
-      create_element(e)
-    end
-
-    def get_package(id)
-      p=@kernel.GetPackageByID(id)
-      Package.new(p,self)
-    end
-
-    def get_package_by_name(name)
-      a=name.split('/')
-      begin; n=a.shift; end while n==""
-      m=get_model_by_name(n)
-      m.get_package_by_name(a.join('/')) 
-    end
-
-    def get_connector(id)
+   def get_connector(id)
       c=self.GetConnectorByID(id)
       Connector.new(c,self)
     end
@@ -143,8 +133,9 @@ module EA
 
     private
     def create_element(kernel)
-      #puts "DEBUG>> Create element '#{kernel.name}'"
+      #puts "DEBUG>> Create element '#{kernel.name}' '#{kernel.Type}'"
       klass=get_klass(kernel.Type)
+
       case klass.to_s               # case statement doesn't work with constants
       when "EA::Package"
         pkg_kernel=get_package_of_element(kernel)
@@ -188,6 +179,42 @@ module EA
       end
       array
     end
+
+    def get_package_by_id(id)
+      p=@kernel.GetPackageByID(id)
+      Package.new(p,self)
+    end
+
+    def get_package_by_name(name)
+      a=name.split('/')
+      begin; n=a.shift; end while n==""
+      m=get_model_by_name(n)
+      m.get_package_by_name(a.join('/'))
+    end
+
+    def get_package_by_guid(guid)
+      p=@kernel.GetPackageByGUID(guid)
+      Package.new(p,self)
+    end
+
+    def get_element_by_id(id)
+      el=@kernel.GetElementByID(id)
+      create_element(el)
+    end
+
+    def get_element_by_name(name)
+      a=name.split('/')
+      begin; n=a.shift; end while n==""
+      m=get_model_by_name(n)
+      m.get_element_by_name(a.join('/'))
+    end
+
+    def get_element_by_guid(guid)
+      e=@kernel.GetElementByGUID(guid)
+      create_element(e)
+    end
+
+
   end
 
 end

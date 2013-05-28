@@ -33,6 +33,14 @@ module EA
       '/'+s.reverse.join('/')
     end
 
+    def package_id
+      @kernel.PackageID
+    end
+
+    def package_GUID
+      @kernel.PackageGUID
+    end
+
     def add_package(name)
       @packages.add_new(name,"Nothing")
     end
