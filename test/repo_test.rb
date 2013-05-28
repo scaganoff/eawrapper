@@ -29,19 +29,40 @@ class RepoTest < Test::Unit::TestCase
     assert rqts.size==3
   end
 
-  def test_get_package_by_name
-    p=@repo.get_package_by_name('Model/Requirements Model/Functional')
+  def test_get_package
+    p=@repo.get_package('Model/Requirements Model/Functional')
     assert p.name=='Functional'
+
+    id=p.package_id
+    p=@repo.get_package(id)
+    assert p.name=='Functional'
+
+    guid = p.package_GUID
+    p=@repo.get_package(guid)
+    assert p.name=='Functional'
+
   end
 
-  def test_get_element_by_name
-    e=@repo.get_element_by_name('Model/Requirements Model/Functional/Reqt1')
+  def test_get_element
+    e=@repo.get_element('Model/Requirements Model/Functional/Reqt1')
+    assert e.name=='Reqt1'
+    assert e.is_a? EA::Element
+    assert e.type=='Requirement'
+
+    guid = e.element_GUID
+    e=@repo.get_element(guid)
+    assert e.name=='Reqt1'
+    assert e.is_a? EA::Element
+    assert e.type=='Requirement'
+
+    id=e.element_id
+    e=@repo.get_element(id)
     assert e.name=='Reqt1'
     assert e.is_a? EA::Element
     assert e.type=='Requirement'
   end
 
-  def test_get_package_as_element
+   def test_get_package_as_element
     e=@repo.get_element(7)  # Package "Domain2" is associated with ElementID=7
     assert e.is_a? EA::Package
     assert e.packageid==8
@@ -50,7 +71,7 @@ class RepoTest < Test::Unit::TestCase
   # TODO: allow/require leading '/' in get_element_by_name path.
 
   def test_ancestor_test
-    bp=@repo.get_element_by_name('Model/Process Model/Workflows/BusinessProcess1')
+    bp=@repo.get_element('Model/Process Model/Workflows/BusinessProcess1')
     activity1=bp.get_subelement_by_name('Activity 1')
     assert activity1.has_ancestor_package?('/Model/Process Model')==true
     assert activity1.has_ancestor_package?('/Model/Use Case Model')==false
