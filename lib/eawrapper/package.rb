@@ -29,8 +29,11 @@ module EA
     end
 
     def path
-      s=push_package([])
-      '/'+s.reverse.join('/')
+      if @parent.nil? then
+        return "/"+name
+      else
+        return @parent.path+"/"+name
+      end
     end
 
     def package_id
@@ -46,7 +49,9 @@ module EA
     end
 
     def add_element(name, type)
-      @elements.add_new(name,type.to_s)
+      s_type=type.to_s
+      s_type.sub!(/EA::/,'')
+      @elements.add_new(name,s_type)
     end
 
     def move(new_parent)
@@ -76,14 +81,6 @@ module EA
 
     def hash
       packageguid.hash
-    end
-
-    def push_package(stack)
-      stack.push(name)
-      unless @parent.nil? then
-        @parent.push_package(stack)
-      end
-      stack
     end
 
   end

@@ -25,7 +25,7 @@ class OleDelegateTest < Test::Unit::TestCase
   end
 
   def test_mm_element
-    e=@repo.get_element_by_name('Model/Component Model/Domain 1 Components/Component2')
+    e=@repo.get_element('Model/Component Model/Domain 1 Components/Component2')
     assert e.complexity=='1'
     assert e.version=='1.0'
     assert e.phase=='1.0'

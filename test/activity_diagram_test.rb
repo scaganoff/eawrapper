@@ -29,14 +29,14 @@ class ActivityDiagramTest < Test::Unit::TestCase
   end
 
   def test_get_activity
-    bp=@repo.get_element_by_name('/Model/Process Model/Workflows/BusinessProcess1')
+    bp=@repo.get_element('/Model/Process Model/Workflows/BusinessProcess1')
     activity=bp.get_subelement_by_name('Activity 1')
     assert activity.Name=="Activity 1", "Unexpected activity name '#{activity.Name}'"
     assert activity.is_a?(EA::Activity), "Unexpected activity type"
   end
 
   def test_get_actions
-    bp=@repo.get_element_by_name('/Model/Process Model/Workflows/BusinessProcess1')
+    bp=@repo.get_element('/Model/Process Model/Workflows/BusinessProcess1')
     activity=bp.get_subelement_by_name('Activity 1')
     actions=activity.get_actions()
     assert actions.count==7, "Unexpected number of actions: #{actions.count}"
@@ -49,7 +49,7 @@ class ActivityDiagramTest < Test::Unit::TestCase
 
   def test_request_reply_consumer
     guid="{A1276A55-1433-4def-9238-0153F7917BCE}"
-    action=@repo.get_element_by_guid(guid)
+    action=@repo.get_element(guid)
     assert action.is_a?(EA::Action), "Expected element to be an Action"
     assert action.name=="getThis", "Unexpected action name '#{action.name}'"
     assert action.is_call_operation?, "Expected this action to be a call operation! Got false"
@@ -61,7 +61,7 @@ class ActivityDiagramTest < Test::Unit::TestCase
 
   def test_one_way_out_consumer
     guid="{FB3ABD0A-1D15-498b-A710-806F032B716F}"
-    action=@repo.get_element_by_guid(guid)
+    action=@repo.get_element(guid)
     assert action.is_a?(EA::Action), "Expected element to be an Action"
     assert action.name=="notifyBaz", "Unexpected action name '#{action.name}'"
     assert action.is_call_operation?, "Expected this action to be a call operation! Got false"
@@ -73,7 +73,7 @@ class ActivityDiagramTest < Test::Unit::TestCase
 
   def test_activity_partition
     guid="{FB3ABD0A-1D15-498b-A710-806F032B716F}"
-    action=@repo.get_element_by_guid(guid)
+    action=@repo.get_element(guid)
     assert action.is_a?(EA::Action), "Expected element to be an Action"
     assert action.name=="notifyBaz", "Unexpected action name '#{action.name}'"
 

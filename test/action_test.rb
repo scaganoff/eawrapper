@@ -29,7 +29,7 @@ class ActionTest < Test::Unit::TestCase
 
   def test_call_operation_action
     guid="{A1276A55-1433-4def-9238-0153F7917BCE}"
-    action=@repo.get_element_by_guid(guid)
+    action=@repo.get_element(guid)
     assert action.is_a?(EA::Action), "Expected element to be an Action"
     assert action.name=="getThis", "Unexpected action name '#{action.name}'"
     assert action.is_call_operation?, "Expected this action to be a call operation! Got false"
@@ -46,7 +46,7 @@ class ActionTest < Test::Unit::TestCase
 
   def test_ordinary_action
     guid="{6CDB11D7-0AB9-4ac8-98B7-6A811144FF09}"
-    action=@repo.get_element_by_guid(guid)
+    action=@repo.get_element(guid)
     assert action.name=="Get a That", "Unexpected action name '#{action.name}'"
     assert_false action.is_call_operation?, "Expected this action to be a call operation! Got false"
 

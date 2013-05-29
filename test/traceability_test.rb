@@ -24,7 +24,7 @@ class TraceabilityTest < Test::Unit::TestCase
   end
 
   def test_trace_usecases
-    rqt=@repo.get_element_by_name('Model/Requirements Model/Functional/Reqt2')
+    rqt=@repo.get_element('Model/Requirements Model/Functional/Reqt2')
     use_cases = rqt.use_cases
     assert use_cases.count==3
     uc_names=[]
@@ -35,7 +35,7 @@ class TraceabilityTest < Test::Unit::TestCase
   end
 
   def test_trace_rqts
-    uc=@repo.get_element_by_name('Model/Use Case Model/Primary Use Cases/Domain2/Use Case4')
+    uc=@repo.get_element('Model/Use Case Model/Primary Use Cases/Domain2/Use Case4')
     rqts=uc.requirements
     assert rqts.count==2
     rqts_names=[]; rqts.each {|r| rqts_names<<r.name }
@@ -44,7 +44,7 @@ class TraceabilityTest < Test::Unit::TestCase
   end
 
   def test_uc_components
-    uc=@repo.get_element_by_name('Model/Use Case Model/Primary Use Cases/Domain2/Use Case4')
+    uc=@repo.get_element('Model/Use Case Model/Primary Use Cases/Domain2/Use Case4')
     cpts=uc.components
     assert cpts.count==2
     cpt_names=[]; cpts.each {|c| cpt_names<<c.name }
@@ -53,7 +53,7 @@ class TraceabilityTest < Test::Unit::TestCase
   end
 
   def test_cpt_use_cases
-    cpt=@repo.get_element_by_name('Model/Component Model/Domain 1 Components/Component1')
+    cpt=@repo.get_element('Model/Component Model/Domain 1 Components/Component1')
     ucs=cpt.use_cases
     assert ucs.count==4
     uc_names=[]; ucs.each {|uc| uc_names<<uc.name }
@@ -64,14 +64,14 @@ class TraceabilityTest < Test::Unit::TestCase
   end
 
   def test_rqt_components
-    rqt = @repo.get_element_by_name('Model/Requirements Model/Functional/Reqt1')
+    rqt = @repo.get_element('Model/Requirements Model/Functional/Reqt1')
     cpts = rqt.components
     assert cpts.count==1
     assert cpts[0].name=='Component1'
   end
 
   def test_rqt_components2
-    rqt = @repo.get_element_by_name('Model/Requirements Model/Functional/Reqt2')
+    rqt = @repo.get_element('Model/Requirements Model/Functional/Reqt2')
     cpts = rqt.components
     assert cpts.count==2
     cpt_names=[]; cpts.each {|c| cpt_names<<c.name }

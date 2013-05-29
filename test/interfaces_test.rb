@@ -24,7 +24,7 @@ class InterfacesTest < Test::Unit::TestCase
   end
 
   def test_ports
-    c=@repo.get_element_by_name('Model/Component Model/Domain 1 Components/Component1')
+    c=@repo.get_element('Model/Component Model/Domain 1 Components/Component1')
     ports=c.ports
     assert ports.size==2, "Unexpected number of ports - got #{ports.size}"
     p=ports[0]
@@ -33,7 +33,7 @@ class InterfacesTest < Test::Unit::TestCase
     assert p.type=='Port'
     assert p.stereotype=='servicePoint'
 
-    c=@repo.get_element_by_name('Model/Component Model/Domain 1 Components/Component2')
+    c=@repo.get_element('Model/Component Model/Domain 1 Components/Component2')
     ports=c.ports
     assert ports.size==2
     names = ports.map {|p| p.name}
@@ -42,7 +42,7 @@ class InterfacesTest < Test::Unit::TestCase
   end
 
   def test_interface_usage
-    c=@repo.get_element_by_name('Model/Component Model/Domain 1 Components/Component2')
+    c=@repo.get_element('Model/Component Model/Domain 1 Components/Component2')
     ifaces=c.interfaces
     assert ifaces.size==2
     pifaces=c.provided_interfaces
@@ -59,7 +59,7 @@ class InterfacesTest < Test::Unit::TestCase
   end
 
   def test_provided_interfaces
-    c=@repo.get_element_by_name('Model/Component Model/Domain 1 Components/Component2')
+    c=@repo.get_element('Model/Component Model/Domain 1 Components/Component2')
     piface=c.provided_interfaces[0]
     actual_iface=piface.interface
     assert actual_iface.is_a?(EA::Interface), "Expected actual_iface to be of type 'EA::Interface'"
@@ -85,7 +85,7 @@ class InterfacesTest < Test::Unit::TestCase
   end
 
   def test_required_interfaces
-    c=@repo.get_element_by_name('Model/Component Model/Domain 1 Components/Component2')
+    c=@repo.get_element('Model/Component Model/Domain 1 Components/Component2')
     riface=c.required_interfaces[0]
     actual_iface=riface.interface
     assert actual_iface.is_a?(EA::Interface), "Expected actual_iface to be of type 'EA::Interface'"
@@ -116,7 +116,7 @@ class InterfacesTest < Test::Unit::TestCase
   end
 
   def test_user_interfaces
-    c=@repo.get_element_by_name('Model/Component Model/Domain 1 Components/Component2')
+    c=@repo.get_element('Model/Component Model/Domain 1 Components/Component2')
     uis=c.user_interfaces
     assert uis.size==1
     ui=uis[0]
@@ -126,7 +126,7 @@ class InterfacesTest < Test::Unit::TestCase
   end
 
    def test_interfaces_component3
-    c=@repo.get_element_by_name('Model/Component Model/Domain 2 Components/Component3')
+    c=@repo.get_element('Model/Component Model/Domain 2 Components/Component3')
     assert c.provided_interfaces.count==0, "Expected no provided interfaces for Component3"
     assert c.required_interfaces.count==1, "Expected one required interface for Component3"
     assert c.required_interfaces[0].name=="Interface1"

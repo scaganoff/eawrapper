@@ -74,7 +74,7 @@ module EA
       a=name.split('/')
       diag_name=a.pop
       pkg_name=a.join('/')
-      pkg=self.get_package_by_name(pkg_name)
+      pkg=self.get_package(pkg_name)
       result=nil
       pkg.Diagrams.each do |d|
         if d.name==diag_name then
@@ -188,8 +188,11 @@ module EA
     def get_package_by_name(name)
       a=name.split('/')
       begin; n=a.shift; end while n==""
-      m=get_model_by_name(n)
-      m.get_package_by_name(a.join('/'))
+      container=get_model_by_name(n)
+      while not(a.empty?) do
+        container=container.get_child_package(a.shift)
+      end
+      container
     end
 
     def get_package_by_guid(guid)

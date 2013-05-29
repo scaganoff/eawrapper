@@ -68,7 +68,7 @@ class RepoTest < Test::Unit::TestCase
     assert e.packageid==8
   end
 
-  # TODO: allow/require leading '/' in get_element_by_name path.
+  # TODO: allow/require leading '/' in get_element path.
 
   def test_ancestor_test
     bp=@repo.get_element('Model/Process Model/Workflows/BusinessProcess1')

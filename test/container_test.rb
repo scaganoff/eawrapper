@@ -67,15 +67,6 @@ module EA
       puts ">>> End test_element_access at #{Time.new}"
     end
 
-#    def test_open_repo
-#      puts ">>> Start test_open_repo at #{Time.new}"
-#      els=@repo.get_elements(UseCase)
-#      assert els.count==4, "Got #{els.count} use-cases, expected 4."
-#      els=@repo.get_elements(Component)
-#      assert els.count==3, "Got #{els.count} components, expected 3."
-#      puts ">>> End test_open_repo at #{Time.new}"
-#    end
-
     def test_find
       puts ">>> Start test_find at #{Time.new}"
       p=@repo.models.first.packages[1].packages.last

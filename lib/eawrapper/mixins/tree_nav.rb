@@ -40,7 +40,6 @@ module EA
       result
     end
 
-
   end
 
 end

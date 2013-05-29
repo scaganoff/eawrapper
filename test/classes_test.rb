@@ -17,7 +17,7 @@ class ClassesTest < Test::Unit::TestCase
 
   def setup
     @repo = EA::Repository.open(@@dir+'/eatest.eap')
-    i = @repo.get_element_by_name("/Model/Domain Model/Messages/IFoo")
+    i = @repo.get_element("/Model/Domain Model/Messages/IFoo")
     i.delete unless i.nil?
   end
 
@@ -27,7 +27,7 @@ class ClassesTest < Test::Unit::TestCase
 
   def test_create_interface_with_methods
 
-    p = @repo.get_package_by_name("/Model/Domain Model/Messages")
+    p = @repo.get_package("/Model/Domain Model/Messages")
     interface = p.add_element("IFoo",EA::Interface)
     m=interface.methods.add_new("do_foo")
     m.parameters.add_new("p1","string")
@@ -35,7 +35,7 @@ class ClassesTest < Test::Unit::TestCase
     #m.add_stereotype("request/reply")  # TODO: multiple stereotypes don't work yet.'
     m.add_stereotype("one-way-out")
 
-    i2 = @repo.get_element_by_name("/Model/Domain Model/Messages/IFoo")
+    i2 = @repo.get_element("/Model/Domain Model/Messages/IFoo")
     assert_equal(i2.name,"IFoo", "Unexpected name")
     assert(i2.type=="Interface","Unexpected element type #{i2.type}")
     assert_equal(i2.methods.count,1, "Unexpected number of methods.")
@@ -47,19 +47,19 @@ class ClassesTest < Test::Unit::TestCase
     p2=m2.parameters.first
     assert_equal(p2.name,"p1","Unexpected parameter name")
 
-    #i2.delete
+    i2.delete
   end
 
   def test_create_class_with_methods
 
-    p = @repo.get_package_by_name("/Model/Domain Model/Messages")
+    p = @repo.get_package("/Model/Domain Model/Messages")
     klass = p.add_element("FooImpl",EA::Klass)
     m=klass.methods.add_new("do_foo")
     m.parameters.add_new("p1","string")
     m.return_type="Bar"
     m.add_stereotype("request/reply")
 
-    k2 = @repo.get_element_by_name("/Model/Domain Model/Messages/FooImpl")
+    k2 = @repo.get_element("/Model/Domain Model/Messages/FooImpl")
     assert_equal(k2.name,"FooImpl", "Unexpected name")
     assert(k2.type=="Class","Unexpected type #{k2.type} ")
     assert_equal(k2.methods.count,1, "Unexpected number of methods.")
@@ -71,7 +71,8 @@ class ClassesTest < Test::Unit::TestCase
     p2=m2.parameters.first
     assert_equal(p2.name,"p1","Unexpected parameter name")
 
-    #k2.delete
+    k2.delete
   end
+
 
 end

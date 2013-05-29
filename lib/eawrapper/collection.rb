@@ -39,7 +39,7 @@ module EA
     end
 
     def add_new(name, type=nil)
-      type="Class" if type=="EA::Klass"
+      type="Class" if type=="Klass"
       obj=@kernel.AddNew(name,type)
       obj.Update
       @kernel.Refresh
