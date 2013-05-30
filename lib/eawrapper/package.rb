@@ -45,13 +45,11 @@ module EA
     end
 
     def add_package(name)
-      @packages.add_new(name,"Nothing")
+      @packages.add_new(name,EA::Package)
     end
 
     def add_element(name, type)
-      s_type=type.to_s
-      s_type.sub!(/EA::/,'')
-      @elements.add_new(name,s_type)
+      @elements.add_new(name,type)
     end
 
     def move(new_parent)

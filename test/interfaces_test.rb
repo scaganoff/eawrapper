@@ -80,8 +80,12 @@ class InterfacesTest < Test::Unit::TestCase
     assert p.type=='That'
 
     pc=p.classifier
-    assert pc.name=='That'
-    assert pc.package.name=='Messages'
+    unless pc.is_a?(String) then
+      assert pc.name=='That', "Unexpected provided interface classifier, expected 'That', got '#{pc.name}'"
+      assert pc.package.name=='Messages'
+    else
+      assert pc=='That'
+    end
   end
 
   def test_required_interfaces
@@ -111,6 +115,8 @@ class InterfacesTest < Test::Unit::TestCase
     unless pc.is_a? String then
       assert pc.name=='Bar'
       assert pc.package.name=='Messages'
+    else
+      assert pc=='Bar'
     end
 
   end

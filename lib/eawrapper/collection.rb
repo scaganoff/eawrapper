@@ -39,10 +39,17 @@ module EA
     end
 
     def add_new(name, type=nil)
-      type="Class" if type=="Klass"
-      obj=@kernel.AddNew(name,type)
+      s_type=type.to_s
+      s_type="Class" if s_type=="EA::Klass"
+      s_type.gsub!(/EA::/,'')
+      obj=@kernel.AddNew(name,s_type)
       obj.Update
       @kernel.Refresh
+
+      # Create the ruby wrapper around the COM object.
+      # Here we assume the new element is the same type as the
+      # Collection. If we don't do this then we need to
+      # enumerate every variation on Element etc.
       case @klass.to_s
       when "EA::Element" then
         result=Element.new(obj,@repo,type)

@@ -18,7 +18,7 @@ module EA
 
     def classifier
       begin
-        result=@repo.get_element(@kernel.ClassifierID)
+        result=@repo.get_element((@kernel.ClassifierID).to_i)
       rescue
         puts "Warning: cannot find classifier for parameter '#{@name}'. Using 'type' instead."
         result=self.type
