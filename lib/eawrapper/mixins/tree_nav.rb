@@ -29,6 +29,8 @@ module EA
         pkg=self.package
       end
       result=false
+
+      puts "DEBUG #{self.name}"
       until pkg.nil?
         if pkg.path==package_path then
           result=true
