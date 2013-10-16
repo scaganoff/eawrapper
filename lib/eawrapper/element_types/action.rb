@@ -44,7 +44,7 @@ module EA
           result=get_onewayin_consumer
         when 'one-way-out'
           result=get_onewayout_consumer
-        default # without a stereotype, guess it is req/reply
+        else # without a stereotype, guess it is req/reply
           result=get_reqreply_consumer
       end
       result
