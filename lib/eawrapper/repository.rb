@@ -43,7 +43,7 @@ module EA
 
     def get_element(arg)
       #puts "DEBUG get_element class #{id.class}"
-      if arg.class == Fixnum
+      if arg.class == Fixnum || arg.class == Bignum
       then get_element_by_id(arg)
       elsif /^\{.*\}$/ =~ arg
         then get_element_by_guid(arg)
@@ -52,7 +52,7 @@ module EA
     end
 
     def get_package(arg)
-      if arg.class == Fixnum
+      if arg.class == Fixnum || arg.class == Bignum
       then get_package_by_id(arg)
       elsif /^\{.*\}$/ =~ arg
       then get_package_by_guid(arg)

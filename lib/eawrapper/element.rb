@@ -42,7 +42,7 @@ module EA
 
     # ToDo: make element a container and rationalize how collections are init'ed for elements & packages
 
-    attr_reader :package, :connectors, :embedded_elements, :methods
+    attr_reader :package, :connectors, :embedded_elements, :methods, :attributes
     def initialize(kernel,repo,type=nil)
       super(kernel,repo)
       @package=@repo.get_package(@kernel.PackageID)

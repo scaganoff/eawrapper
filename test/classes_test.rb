@@ -74,5 +74,21 @@ class ClassesTest < Test::Unit::TestCase
     k2.delete
   end
 
+  def test_create_class_with_attributes
+
+    p = @repo.get_package("/Model/Domain Model/Messages")
+    klass = p.add_element("AttrTestClass",EA::Klass)
+    a=klass.attributes.add_new("foo")
+
+    k2 = @repo.get_element("/Model/Domain Model/Messages/AttrTestClass")
+    assert_equal(k2.name,"AttrTestClass", "Unexpected name")
+    assert(k2.type=="Class","Unexpected type #{k2.type} ")
+    assert_equal(k2.attributes.count,1, "Unexpected number of attributes.")
+
+    m2=k2.attributes.first
+    assert_equal(m2.name,"foo","Unexpected attribute name")
+
+    k2.delete
+  end
 
 end
