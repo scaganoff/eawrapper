@@ -3,7 +3,9 @@
 #  Copyright:: Copyright (c) 2010, Saul Caganoff
 #  License::   Creative Commons Attribution 3.0 Australia License (http://creativecommons.org/licenses/by/3.0/au/)
 #
+require 'eawrapper/connector_types/association'
 require 'eawrapper/connector_types/control_flow'
+require 'eawrapper/connector_types/information_flow'
 require 'eawrapper/connector_types/dependency'
 require 'eawrapper/connector_types/note_link'
 require 'eawrapper/connector_types/object_flow'
@@ -14,13 +16,12 @@ module EA
 
   class Connector < OLEDelegate
 
-#    @@allowed_types=[:aggregation, :association, :connector, :generalization, :realization, :sequence] # TODO: need to add more
-
-    attr_reader :package, :source, :target
+    attr_reader :package, :source, :target, :conveyed_items
     def initialize(kernel,repo,type=nil)
       super(kernel,repo)
       @source=@repo.get_element(@kernel.ClientID)
       @target=@repo.get_element(@kernel.SupplierID)
+      @conveyed_items=Collection.new(@kernel.ConveyedItems, @repo, Element) # TODO: move this into the mixin
 
       # extend this instance with the appropriate Mixin for this Connector type
       begin
@@ -42,7 +43,6 @@ module EA
     end
 
     def type=(new_type)
-#      raise "Invalid connector type '#{new_type}'" unless @@allowed_types.include?(new_type)
       @kernel.Type=new_type
       @kernel.Update
     end
@@ -54,6 +54,7 @@ module EA
     def delete
       source_idx=@source.connectors.find(self)
       @source.connectors.delete_at(source_idx)
+		@source.update
     end
 
     def ==(other)

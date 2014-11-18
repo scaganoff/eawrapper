@@ -8,3 +8,4 @@ ruby ole_delegate_test.rb
 ruby repo_test.rb
 ruby sequence_diagram_test.rb
 ruby traceability_test.rb
+ruby connector_test.rb

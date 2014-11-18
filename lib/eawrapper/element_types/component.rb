@@ -52,6 +52,11 @@ module EA
       interfaces(/RequiredInterface/)
     end
 
+	 def add_port(name='Port')
+		p=self.embedded_elements.add_new(name,'Port')
+		return p
+	 end
+
   end
 
 end
