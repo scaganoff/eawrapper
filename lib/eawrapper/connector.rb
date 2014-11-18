@@ -54,6 +54,7 @@ module EA
     def delete
       source_idx=@source.connectors.find(self)
       @source.connectors.delete_at(source_idx)
+		@source.connectors.refresh
 		@source.update
     end
 

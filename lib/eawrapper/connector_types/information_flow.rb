@@ -9,7 +9,8 @@ module EA
   module InformationFlow
 
 	  def add_conveyed_item(el)
-		  self.conveyed_items.kernel.addnew(el.elementguid,nil)
+		  self.conveyed_items.kernel.AddNew(el.elementguid,nil)
+		  self.conveyed_items.kernel.Refresh
 	  end
   end
 

@@ -36,6 +36,7 @@ class ClassesTest < Test::Unit::TestCase
 	 @this.connectors.each {|z| puts ">> #{z.name}"}
 	 puts "---end dump---"
 	 c.delete
+	 # TODO: deletion doesn't remove straightaway
 	 #assert_equal(@this.connectors.count,0)
 	 puts "---dump2---"
 	 @this.connectors.each {|z| puts ">> #{z.name}"}
@@ -57,6 +58,7 @@ class ClassesTest < Test::Unit::TestCase
 	 cpt1.connectors.each {|z| puts ">> #{z.name}"}
 	 puts "---end dump---"
 	 c.delete
+	 # TODO: deletion doesn't remove straightaway
 	 #assert_equal(baseline_count, cpt1.connectors.count)
 	 puts "---dump4---"
 	 cpt1.connectors.each {|z| puts ">> #{z.name}"}
@@ -89,6 +91,7 @@ class ClassesTest < Test::Unit::TestCase
 
 
 	 c.delete
+	 # TODO: deletion doesn't remove straightaway
 	 #assert_equal(baseline_count, cpt1.connectors.count)
 	 puts "---dump7---"
 	 cpt1.connectors.each {|z| puts ">> #{z.name}"}
