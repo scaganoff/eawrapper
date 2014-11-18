@@ -3,6 +3,7 @@
 #  Copyright:: Copyright (c) 2010, Saul Caganoff
 #  License::   Creative Commons Attribution 3.0 Australia License (http://creativecommons.org/licenses/by/3.0/au/)
 #
+require 'eawrapper/connector_types/assembly'
 require 'eawrapper/connector_types/association'
 require 'eawrapper/connector_types/control_flow'
 require 'eawrapper/connector_types/information_flow'

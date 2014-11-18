@@ -1,5 +1,6 @@
 ruby action_test.rb
 ruby activity_diagram_test.rb
+ruby assembly_test.rb
 ruby classes_test.rb
 ruby container_test.rb
 ruby database_queries_test.rb

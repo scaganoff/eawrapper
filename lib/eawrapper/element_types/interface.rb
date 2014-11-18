@@ -19,5 +19,10 @@ module EA
       result
     end
 
+	 def add_assembly(target)
+		ass = self.connect_to(target, "Assembly")
+		return ass
+	 end
+
   end
 end
