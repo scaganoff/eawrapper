@@ -13,6 +13,27 @@ module EA
       @repo.get_element(@kernel.ParentID)
     end
 
+	 def delete
+		cpt=self.component
+		idx=cpt.embedded_elements.find(self)
+		cpt.embedded_elements.delete_at(idx)
+		cpt.embedded_elements.refresh
+		cpt.update
+	 end
+
+    def interfaces(match=/Interface/)
+      arr = self.embedded_elements.find_all {|e| e.type=~match}
+      arr.map {|p| Element.new(p,@repo)}
+    end
+    
+    def provided_interfaces
+      interfaces(/ProvidedInterface/)
+    end
+
+    def required_interfaces
+      interfaces(/RequiredInterface/)
+    end
+
 	 def add_provided_interface(name)
 		p=self.embedded_elements.add_new(name,"ProvidedInterface")
 		return p

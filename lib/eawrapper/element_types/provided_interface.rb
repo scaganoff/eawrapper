@@ -22,6 +22,11 @@ module EA
       self.port.component
     end
 
+	 def add_assembly(target,name="")
+		ass = self.connect_to(target, name, "Assembly")
+		return ass
+	 end
+
   end
 
 end

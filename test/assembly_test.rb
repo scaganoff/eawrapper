@@ -33,17 +33,21 @@ class ClassesTest < Test::Unit::TestCase
 	 if1 = p1.add_provided_interface("Interface1")
 
 	 p2 = cpt2.add_port
-	 if2 = p2.add_consumed_interface("Interface1")
+	 if2 = p2.add_required_interface("Interface1")
 
 	 c = if1.add_assembly(if2)
 
 	 assert_equal(1,cpt1.ports.count)
-	 assert_equal(1,cpt1.ports.interfaces.count)
-	 assert_equal("Interface1",cpt1.ports.interfaces.first.name)
+	 assert_equal(1,cpt1.ports.first.interfaces.count)
+	 assert_equal("Interface1",cpt1.ports.first.interfaces.first.name)
 	 assert_equal(1,cpt2.ports.count)
-	 assert_equal(1,cpt2.ports.interfaces.count)
-	 assert_equal("Interface1",cpt2.ports.interfaces.first.name)
+	 assert_equal(1,cpt2.ports.first.interfaces.count)
+	 assert_equal("Interface1",cpt2.ports.first.interfaces.first.name)
 
+	 # cleanup
+	 c.delete
+	 p1.delete
+	 p2.delete
   end
 
 end
